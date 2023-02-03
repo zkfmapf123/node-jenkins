@@ -1,0 +1,14 @@
+version: '3'
+services:
+  dev-node:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3002:3001'
+  prod-node:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - '3001:3000'
