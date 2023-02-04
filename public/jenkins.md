@@ -11,7 +11,7 @@
 > process 설치
 
 ```
-    docker run -d --restart always --name jenkins -p 8080:8080 -p 50000:50000 -v ~/var/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+    docker run -d --restart always --name jenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 ```
 
 ## 2. Jenkins 파일 위치
@@ -41,6 +41,26 @@
 - Build Environment > Check to "Provide Node & npm bin/folder to PATH"
 - Build > Execute Shell > "npm install"
 - Console로 확인
+
+> 4. Jenkins Docker 연동하는 법
+
+- Jenkins 관리 > Plugin Manager > Available plugins > install "cloudBees Docker Build and Publish"
+
+- local > git clone https://github.com/zkfmapf123/jenkins-docker > docker build -t jenkins-docker ./
+
+- docker container 있는 버전으로 다시 설치
+
+```
+    docker run -u 0 -d --restart always --name jenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins-docker
+```
+
+> 5. Docker 형태로 배포하기 in Jenkins
+
+- [Project_name] > Configure > Build Steps > Select "Docker Build and Publish" > Docker Hub에 존재하는 Repository를 입력한다
+
+> docker.sock 확인
+
+- var/jenkins_home/run/docker.sock
 
 ## n. Issue
 
