@@ -1,28 +1,21 @@
 # Node-CICD
 
-## Run
+### Todo
+
+- [ ] docker-compose.yml을 실행시킬수는 없을까?
+
+## Command
 
 ```
+    // docker-compose in nodejs
     make docker-run
-```
 
-## Desc
+    // jenkins 설치
+    docker pull jenkins/jenkins:lts
 
-## Tools
-
-### Jenkins
-
-- [More Jenkins](./public/jenkins.md)
-  > CI/CD within the SDLC (Software Development Life Cycle)
+    // jenkins conatainer
+    docker run -u 0 -d --restart always --name jenkins -p 8080:8080 -p 50000:50000 -p 3001:3001 -p 3000:3000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts
 
 ```
-    Devloper > Build > Test > Release > Deploy | Provision > Customer
-
-    Devloper <-> Build (Plan)
-    Develper <-> Test (Monitor)
-    Release <-> Deploy (use jenkins)
-```
-
-### Docker
 
 - <a href="https://github.com/zkfmapf123/til/blob/master/Docker_%EC%9D%B4%EB%A1%A0.md"> Docker </a>

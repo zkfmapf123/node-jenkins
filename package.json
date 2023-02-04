@@ -8,8 +8,8 @@
     "build": "babel src --out-dir dist --extensions \".ts\" --source-maps inline",
     "build-watch": "babel -w ./src --out-dir lib --extensions \".ts\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev-start": "npm run build && cross-env NODE_ENV=dev node ./dist/index.js",
-    "prod-start": "npm run build && cross-env NODE_ENV=prod node ./dist/index.js"
+    "dev-start": "npm run build && cross-env NODE_ENV=dev PORT=3001 node ./dist/index.js",
+    "prod-start": "npm run build && cross-env NODE_ENV=prod PORT=3000 node ./dist/index.js"
   },
   "author": "",
   "license": "ISC",
