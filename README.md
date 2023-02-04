@@ -3,6 +3,7 @@
 ### Todo
 
 - [ ] docker-compose.yml을 실행시킬수는 없을까?
+- [ ] Github Push가 되면 Jenkins에서 알아서 배포할 수는 없을까?
 
 ## Command
 
