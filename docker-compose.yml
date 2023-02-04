@@ -5,10 +5,10 @@ services:
       context: ./
       dockerfile: Dockerfile.dev
     ports:
-      - '3002:3001'
+      - '3001:3001'
   prod-node:
     build:
       context: ./
-      dockerfile: ./Dockerfile.dev
+      dockerfile: Dockerfile.prod
     ports:
-      - '3001:3000'
+      - '3000:3000'
