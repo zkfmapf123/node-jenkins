@@ -3,7 +3,9 @@
 ### Todo
 
 - [ ] docker-compose.yml을 실행시킬수는 없을까?
-- [ ] Github Push가 되면 Jenkins에서 알아서 배포할 수는 없을까?
+- [x] Github Push가 되면 Jenkins에서 알아서 배포할 수는 없을까?
+  - Jenkins Gihub URL과 연동을 하면 Master Branch (설정된 브랜치) 변경이 있을때 빌드를 진행한다. (대기열에 쌓인다.)
+- [ ] Gihub Push가 돼면 대기열에 쌓이는데 자동적으로 이후의 배포를 적용할 수는 없을까?
 
 ## Command
 
