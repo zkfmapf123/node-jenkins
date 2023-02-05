@@ -32,6 +32,16 @@
 
 ## Jenkins 설정
 
+- 간단한 위치
+
+  - initialPassword 위치 > var/jenkins_home>secrets>initial...
+  - workspace 위치 > var/jenkins_home/workspace/...
+
+- Jenkins > plugin Management + Global Tool Configuration을 활용하여 필요한 plugins들을 설치한다
+  - Node
+  - Docker build and publish
+- Node Job 생성
+
 ## Github WebHooks
 
 ## DEV, PROD 배포
