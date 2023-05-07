@@ -16,11 +16,6 @@ job("NodeJS CI Process") {
     }
 
     steps {
-        step("1. hello world") {
-            sh "echo 'hello world'"
-        }
-        step("2. ci"){
-            sh "npm run test"
-        }
+        shell "npm run test"
     }
 }

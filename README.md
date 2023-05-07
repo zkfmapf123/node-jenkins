@@ -12,11 +12,21 @@
 
 ## Function
 
+### Func
+
 - [ ] 회원가입
 - [ ] 로그인
 - [ ] 아이디 찾기 (Email)
 - [ ] 비밀번호 찾기
 - [ ] 로그아웃
+
+### AWS
+
+- [ ] public / private subnet으로 서비스 분리
+- [ ] Jenkins를 사용하여 CI/CD 구성
+  - [ ] DLS use Groovy
+  - [ ] send Email
+  - [ ] Deploy Dev, Prod
 
 ## DSL
 
@@ -40,12 +50,7 @@
     }
 
     steps {
-        step("1. hello world") {
-            sh "echo 'hello world'"
-        }
-        step("2. ci"){
-            sh "npm run test"
-        }
+        shell "npm run test"
     }
 }
 ```
