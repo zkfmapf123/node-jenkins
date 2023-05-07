@@ -47,8 +47,8 @@ module jenkins {
     }
 }
 
-module rds {
-    source = "../modules/instance/rds"
+# module rds {
+#     source = "../modules/instance/rds"
 
-    private_subnet_id = module.vpc.private_subnet_id
-}
+#     private_subnet_id = module.vpc.private_subnet_id
+# }

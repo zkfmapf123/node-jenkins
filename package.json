@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "db:up": "docker run --name mysql-server -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=auth -p 3306:3306 -d mysql:latest",
+    "jenkins:up": "docker run -d -p 8080:8080 -p 50000:50000 jenkins/jenkins",
     "start": "cross-env PORT=3000 ts-node index.ts",
     "test": "jest"
   },
