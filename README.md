@@ -12,11 +12,48 @@
 
 ## Function
 
+### Func
+
 - [ ] 회원가입
 - [ ] 로그인
 - [ ] 아이디 찾기 (Email)
 - [ ] 비밀번호 찾기
 - [ ] 로그아웃
+
+### AWS
+
+- [ ] public / private subnet으로 서비스 분리
+- [ ] Jenkins를 사용하여 CI/CD 구성
+  - [ ] DLS use Groovy
+  - [ ] send Email
+  - [ ] Deploy Dev, Prod
+
+## DSL
+
+```groovy
+    // 1. ci.groovy
+    job("NodeJS CI Process") {
+
+    scm {
+        git("https://github.com/zkfmapf123/node-jenkins.git") { node ->
+            node / gitConfigName("leedonggyu")
+            node / gitConfigEmail("zkfmapf123@naver.com")
+        }
+    }
+
+    triggers {
+        scm("H/5 * * * *")
+    }
+
+    wrappers {
+        nodejs("nodejs")
+    }
+
+    steps {
+        shell "npm run test"
+    }
+}
+```
 
 ## ...
 
