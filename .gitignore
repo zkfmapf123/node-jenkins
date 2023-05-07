@@ -1,0 +1,12 @@
+## Node
+node_modules
+.env
+tf.tfvars
+
+## Infra
+.terraform
+.terraform.*
+terraform.*
+
+## Secrets
+secrets/
