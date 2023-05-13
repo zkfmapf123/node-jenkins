@@ -3,7 +3,7 @@ export class UserRepository {
 
   async verifyEmail(email: string) {}
 
-  async verifyPassword(password: string, rePassword: string) {
+  verifyPassword(password: string, rePassword: string): boolean {
     return password === rePassword
   }
 }
