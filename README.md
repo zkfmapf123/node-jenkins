@@ -22,3 +22,5 @@
 
 - Nat Gateway 비싸다.. (Side Project에서는 안쓰는 걸로)
 - VPC Endpoint를 사용하자.
+
+.
