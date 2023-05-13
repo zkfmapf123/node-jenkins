@@ -1,9 +1,9 @@
+tools {
+    nodejs 'nodejs'
+}
+
 node {
     def commit_id
-
-    tools {
-        nodejs 'nodejs'
-    }
 
     stage('Preparation') {
         checkout scm
