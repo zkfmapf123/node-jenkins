@@ -9,9 +9,11 @@ describe('loginRouter Test', () => {
 
   it('[TEST] not matched password', (done) => {
     expect(userRepository.verifyPassword('XXXX', '1234')).toEqual(false)
+    done()
   })
 
   it('[TEST] matched password', (done) => {
     expect(userRepository.verifyPassword('1234', '1234')).toEqual(true)
+    done()
   })
 })
