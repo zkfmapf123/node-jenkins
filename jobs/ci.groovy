@@ -16,6 +16,10 @@ job("NodeJS CI Process") {
     }
 
     steps {
+        shell "npm install"
+    }
+
+    steps {
         shell "npm run test"
     }
 }
